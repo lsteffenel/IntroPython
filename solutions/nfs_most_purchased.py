@@ -1,8 +1,8 @@
 import pandas as pd
 import dask.dataframe as dd
 
-df = dd.read_csv("../data/NationalFoodSurvey/NFS*.csv")
-food_mapping = pd.read_csv("../data/NationalFoodSurvey/food_mapping.csv")
+df = dd.read_csv("./data/NationalFoodSurvey/NFS*.csv")
+food_mapping = pd.read_csv("./data/NationalFoodSurvey/food_mapping.csv")
 
 df1974 = df.get_division(0)
 minfd74 = (df1974.groupby('minfd')

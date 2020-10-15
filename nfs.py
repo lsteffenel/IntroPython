@@ -55,7 +55,8 @@ def denormalize(zip_name):
 
 
 def create_denormalized():
-    fnames = glob.glob('../data/NationalFoodSurvey/NFS_[0-9]*.zip')
+    fnames = glob.glob('./data/NationalFoodSurvey/NFS_[0-9]*.zip')
     for fname in fnames:
         denormalize(fname)
 
+create_denormalized()

@@ -17,7 +17,7 @@ def grouper(partition):
     return result.set_index(partition.index.name)
 
 
-df = dd.read_csv("../data/NationalFoodSurvey/NFS*.csv")
+df = dd.read_csv("./data/NationalFoodSurvey/NFS*.csv")
 partitions = list(range(1974, 2001)) + [2000]
 df = df.set_partition('styr', divisions=partitions)
 

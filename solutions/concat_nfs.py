@@ -9,5 +9,5 @@ def read_csv(file_name):
     df['styr'] = int(year)
     return df
 
-diary_files = glob.glob("../data/NationalFoodSurvey/NFS_[0-9]*/*diary*")
+diary_files = glob.glob("./data/NationalFoodSurvey/NFS_[0-9]*/*diary*")
 dta = pd.concat(map(read_csv, diary_files), axis=0, ignore_index=True)

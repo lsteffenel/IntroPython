@@ -3,7 +3,7 @@ import json
 import dask.bag as db
 
 
-bag = db.read_text(os.path.join('..', 'data', 'accounts.*.json.gz'))
+bag = db.read_text(os.path.join('.', 'data', 'accounts.*.json.gz'))
 js = bag.map(json.loads)
 
 
